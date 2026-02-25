@@ -1,0 +1,135 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #1e1e1e;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  color: #00ffcc;
+  text-shadow: 0 0 10px #00ffcc;
+}
+
+/* === CALCULATOR STYLES === */
+.calculator {
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 255, 204, 0.2);
+  display: inline-block;
+  position: relative;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* LIGHT MODE */
+.calculator.light-mode {
+  background: #f0f0f0;
+  color: #000;
+}
+
+.calculator.light-mode #display {
+  background: #fff;
+  color: #000;
+}
+
+/* DARK MODE */
+.calculator.dark-mode {
+  background: #2e2e2e;
+  color: #fff;
+}
+
+.calculator.dark-mode #display {
+  background: #111;
+  color: #00ffcc;
+}
+
+/* === TOGGLE CIRCLE (small + above display) === */
+.theme-toggle {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  position: absolute;
+  top: 8px;
+  right: 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+}
+
+.calculator.light-mode .theme-toggle {
+  background: #000;
+}
+
+.calculator.dark-mode .theme-toggle {
+  background: #fff;
+}
+
+/* === DISPLAY === */
+#display {
+  width: 100%;
+  height: 60px;
+  font-size: 24px;
+  text-align: right;
+  padding: 10px;
+  margin: 25px 0 15px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: inset 0 0 5px rgba(0, 255, 204, 0.2);
+}
+
+/* === BUTTONS === */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 70px);
+  gap: 12px;
+  justify-content: center;
+}
+
+button {
+  height: 60px;
+  font-size: 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #444;
+  color: #fff;
+  transition: 0.2s;
+  box-shadow: 0 4px #333;
+}
+
+button:hover {
+  background: #00ffcc;
+  color: #000;
+  box-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+}
+
+.operator {
+  background: #ff6666;
+}
+
+.operator:hover {
+  background: #ff9999;
+  color: #000;
+}
+
+.equal {
+  background: #00cc66;
+}
+
+.equal:hover {
+  background: #00ff99;
+}
+
+.zero {
+  grid-column: span 2;
+}
